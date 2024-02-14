@@ -13,6 +13,8 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import Exercises from './components/exercises/exerciseIndex'
+import ExerciseShow from './components/exercises/exerciseShow'
+import ExerciseCreateFav from './components/exercises/ExerciseFavCreate'
 
 const App = () => {
 
@@ -94,6 +96,22 @@ const clearUser = () => {
 				element={
 					<RequireAuth user={user}>
 						<Exercises msgAlert={msgAlert} user={user} />
+					</RequireAuth>
+				}
+			/>
+			<Route
+				path='/exercises/:name'
+				element={
+					<RequireAuth user={user}>
+						<ExerciseShow msgAlert={msgAlert} user={user} />
+					</RequireAuth>
+				}
+			/>
+			<Route
+				path='/exercises/create-favorite'
+				element={
+					<RequireAuth user={user}>
+						<ExerciseCreateFav msgAlert={msgAlert} user={user} />
 					</RequireAuth>
 				}
 			/>
