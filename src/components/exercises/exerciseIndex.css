@@ -1,0 +1,46 @@
+#index{
+    
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto; 
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+    
+}
+
+#title{
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3em;
+    color: white;
+    padding-bottom: 10vmin;
+    text-shadow: 0 0 5px #070707, 0 0 10px #000000;
+
+}
+
+#btnSearch{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    padding: 2vmin;
+    text-shadow: 0 0 5px #5e99a3, 0 0 10px #ffffff;
+    width: 50%;
+    height: 10%;
+}
+
+#btnSearch:hover{
+    transform: scale(1.1);
+    transition: transform 150ms ease-in;
+}
+
+#searchForm{
+    display: flex;
+
+}

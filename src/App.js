@@ -15,6 +15,7 @@ import ChangePassword from './components/auth/ChangePassword'
 import Exercises from './components/exercises/exerciseIndex'
 import ExerciseShow from './components/exercises/exerciseShow'
 import ExerciseCreateFav from './components/exercises/ExerciseFavCreate'
+import ExerciseShowFavs from './components/exercises/ExerciseIndexFavs'
 
 const App = () => {
 
@@ -112,6 +113,14 @@ const clearUser = () => {
 				element={
 					<RequireAuth user={user}>
 						<ExerciseCreateFav msgAlert={msgAlert} user={user} />
+					</RequireAuth>
+				}
+			/>
+			<Route
+				path='/exercises/show-favorites'
+				element={
+					<RequireAuth user={user}>
+						<ExerciseShowFavs msgAlert={msgAlert} user={user} />
 					</RequireAuth>
 				}
 			/>
